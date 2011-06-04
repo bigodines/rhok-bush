@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.views.generic import ListView, DetailView
 from models import Profile, Call, Skill, Resource
+from views import cadastro
 
 urlpatterns = patterns('',
     #url(r'^/', 'views.index'),
@@ -14,7 +15,7 @@ urlpatterns = patterns('',
                                                         template_name='volunteers/calls/detail.html'),
         name='call-detail'),
 
-    #url(r'^chamada/cadastro/', 'views.call.new'),
+    url(r'^cadastro/chamada/', cadastro),
 
     #url(r'^perfil/', 'views.profile.index'),
     #url(r'^perfil/(?P<year>\d+)/', 'views.profile.details'),
