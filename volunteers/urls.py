@@ -15,7 +15,7 @@ urlpatterns = patterns('',
                                                         template_name='volunteers/calls/detail.html'),
         name='call-detail'),
 
-    url(r'^cadastro/chamada/', cadastro),
+    url(r'^cadastro/chamada/', cadastro, name='call-new'),
 
     #url(r'^perfil/', 'views.profile.index'),
     #url(r'^perfil/(?P<year>\d+)/', 'views.profile.details'),

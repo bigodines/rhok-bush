@@ -1,7 +1,11 @@
 <html>
 
-    <table>
-        {{ form }}
-    </table>
+    <form method="post" action="{% url call-new %}">
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="Salvar" />
+    </form>
 
 </html>
