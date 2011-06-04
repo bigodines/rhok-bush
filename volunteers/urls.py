@@ -6,7 +6,7 @@ from views import cadastro
 urlpatterns = patterns('',
     #url(r'^/', 'views.index'),
 
-    url(r'^chamada/$', ListView.as_view(model=Call,
+    url(r'^chamadas?/$', ListView.as_view(model=Call,
                                        context_object_name='calls',
                                        template_name='volunteers/calls/index.html'),
         name="calls-list"),
