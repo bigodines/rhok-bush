@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Chamadas</title>
+    </head>
+    <body>
+        <h1>Chamadas</h1>
+
+        {% if not calls %}
+            <p>N&atilde;o existem nenhuma chamada!</p>
+        {% else %}
+            <ul>
+                {% for call in calls %}
+                    <li><a href="{% url call-detail call.slug  %}" >{{ call.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </body>
+</html>
