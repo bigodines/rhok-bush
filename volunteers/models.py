@@ -23,6 +23,9 @@ class Call(models.Model):
     skills_needed = models.ManyToManyField('Skill', blank=True)
     resources_needed = models.ManyToManyField('Resource', blank=True)
 
+    class Meta:
+        ordering = ['-when']
+
     def __unicode__(self):
         return self.title
 
