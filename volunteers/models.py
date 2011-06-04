@@ -2,7 +2,7 @@ from django.db import models
 
 class Profile(models.Model):
     name = models.CharField(max_length=30)
-    resources = models.OneToManyField('Resource')
+    resources = models.ManyToManyField('Resource')
 
 class Resource(models.Model):
     name = models.CharField(max_length=30)
@@ -10,4 +10,4 @@ class Resource(models.Model):
 class Event(models.Model):
     name = models.CharField(max_length=30)
     date_time = models.DateTimeField()
-    resources_required = models.OneToManyField('Resource')
+    resources_required = models.ManyToManyField('Resource')
