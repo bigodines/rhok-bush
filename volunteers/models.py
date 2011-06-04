@@ -2,6 +2,7 @@ from django.db import models
 
 class Profile(models.Model):
     name = models.CharField(max_length=255)
+    slug = models.SlugField()
     email = models.EmailField()
     mobile = models.CharField(max_length=255, blank=True)
     where = models.CharField(max_length=255)
@@ -14,6 +15,7 @@ class Profile(models.Model):
 
 class Call(models.Model):
     title = models.CharField(max_length=255)
+    slug = models.SlugField()
     where = models.CharField(max_length=255)
     when = models.DateTimeField()
     classification = models.CharField(max_length=255)
